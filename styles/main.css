@@ -1,0 +1,329 @@
+/* ========================================== Fonts ========================================== */
+@font-face {
+  font-family: 'InsightWebBold';
+  src: url('../assets/font-styles/insight_web_bold.eot');
+  src: url('../assets/font-styles/insight_web_bold.eot?#iefix') format('embedded-opentype'), url('../assets/font-styles/insight_web_bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'InsightWebRegular';
+  src: url('../assets/font-styles/insight_web_regular.eot');
+  src: url('../assets/font-styles/insight_web_regular.eot?#iefix') format('embedded-opentype'), url('../assets/font-styles/insight_web_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'InsightDisplayWebLight';
+  src: url('../assets/font-styles/insight_web_light.eot');
+  src: url('../assets/font-styles/insight_web_light.eot?#iefix') format('embedded-opentype'), url('../assets/font-styles/insight_web_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+/* ========================================== Overall ========================================== */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* Ex-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+  .container {
+    width: 1360px;
+  }
+} 
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+} 
+body {
+  font-family: InsightWebRegular, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 14px; 
+  color: #20515b;
+  background: #e0e5e6; 
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+a {
+  color: #74b1be;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+  color: #5f6b77;
+  color: #2f3241;
+}
+a:focus {
+  text-decoration: none;
+}  
+.section { 
+  background: #fff;
+  padding: 24px;
+}  
+blockquote, .blockquote {
+  padding: 0 1em;
+  margin-bottom: 1em;
+  margin-left: -4px;
+  color: #777;
+  border-left: 4px solid #ddd; 
+}
+ 
+/* ========================================== Buttons ========================================== */
+.btn-lg {
+  background-color: #fff; 
+  font-size: 18px; 
+} 
+.btn-outline-themed { 
+  font-size: inherit;
+  color: #20515b;
+  background: transparent;
+  border-color: #20515b;
+  border-radius: .25em; 
+}
+.btn-outline-themed:hover, .btn-outline-themed:active {
+  color: #fff;
+  background-color: #20515b;
+  border-color: #20515b; 
+} 
+.btn-outline-themed:hover,
+.btn-outline-themed:active {
+  background-image: none; 
+} 
+.btn .fa, a.btn .fa {
+  margin-right: 5px;
+} 
+ 
+/* ========================================== Header ========================================== */ 
+.container-header { 
+  display: grid;  
+  grid-template-columns: [first] 20% [line2] 10% [line3] 30% [col4-start] 20% [five] 20% [end];
+  grid-template-rows: [row1-start] 25% [row1-end] 35% [third-line] 40% [last-line];
+  background: #2f3241; 
+  background-color: #2f3241;
+  padding-top: 25px;
+  padding-bottom: 25px;
+} 
+.container-header .item-1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.container-header .item-1 img { 
+  border-radius: 50%;
+}
+.container-header .item-2 {
+  grid-column-start: 3;
+  grid-column-end: col4-start;
+  grid-row-start: row1-end;
+  grid-row-end: 3;
+}
+.container-header .item-2 .name { 
+  font-family: 'InsightWebBold'; 
+  font-size: 38px; 
+  color: #74b1be;
+  padding-left: 2%;
+}
+.container-header .item-2 .desc {    
+  font-family: 'InsightWebBold';
+  font-size: 24px; 
+  color: #74b1be;
+  padding-left: 2%;
+} 
+.container-social {
+  display: inline-grid; 
+  grid-template-columns: [first] 20% [line2] 20% [line3] 20% [col4-start] 20% [five] 20% [end]; 
+  width: 35%; 
+  height: 70%;
+  padding-left: 2%;
+  align-items: stretch;
+}  
+.container-social a .fa-2x { 
+  font-size: 20px; 
+}  
+.container-social .icon-background {
+  color: #e0e5e6;
+}
+.container-social .item-1  {
+  grid-column-start: first;
+  grid-column-end: 2;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end; 
+} 
+.container-social .item-2  {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end; 
+} 
+.container-social .item-3  {
+  grid-column-start: 3;
+  grid-column-end: col4-start;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end; 
+} 
+.container-social .item-4  {
+  grid-column-start: col4-start;
+  grid-column-end: 5;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end; 
+} 
+
+/* ========================================== Sections ========================================== */
+.container-content {
+  display: grid;   
+  grid-template-columns: 15% 45% 25% 15%; 
+  grid-template-rows: repeat(100, [row] auto  ); 
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  justify-items: stretch; 
+  margin-top: 24px;
+}
+.container-content .item-1 { 
+  grid-column: 2; 
+  display: grid;   
+  grid-template-columns: 100%; 
+  grid-template-rows: repeat(100, [row] auto  ); 
+  grid-auto-flow: row;
+  grid-gap: 24px;
+}
+.container-content .item-2 { 
+  grid-column: 3; 
+  display: grid;   
+  grid-template-columns: 100%; 
+  grid-template-rows: repeat(100, [row] auto  ); 
+  grid-auto-flow: row;
+  grid-gap: 24px;
+} 
+.container-content .item-1 .item-1-1 { /*About Me*/
+  grid-column: 1; 
+}
+.container-content .item-1 .item-1-2 { /*Tech Interests or Passion:*/
+  grid-column: 1; 
+}
+.container-content .item-1 .item-1-3 { /*Projects*/
+  grid-column: 1; 
+}
+.container-content .item-1 .item-1-4 { /*Work Experience*/
+  grid-column: 1; 
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 10% 90%;  
+  align-items: top; 
+} 
+.container-content .item-1 .item-1-4 .duration, 
+.container-content .item-1 .item-1-4 .location {
+  color: #939ea9;
+  font-size: 14px; 
+  font-weight: 500;
+}    
+.container-content .item-1 .item-1-4 .company { 
+  font-size: 18px;  
+}  
+
+.container-content .item-1 .item-1-4 .item-1-4-1 { 
+  grid-column: 1; 
+} 
+.container-content .item-2 .item-1-4 .item-1-4-2 { 
+  grid-column: 2; 
+} 
+
+.container-content .item-2 .item-2-1 { /*Basic Information*/
+  grid-column: 1; 
+}
+.container-content .item-2 .item-2-2 { /*Testimonials*/
+  grid-column: 1; 
+} 
+.container-content .fa  { 
+  font-size: 20px; 
+  padding-right: 5px;
+}   
+.container-content .quote  { 
+  color: #666;
+  font-size: 14px;
+  border-left-color: #9fdeb7;
+  margin-bottom: 15px;
+}  
+.container-content .quote .fa { 
+  color: #79d19a;
+  margin-right: 15px;
+}  
+.container-content .signature {
+  color: #939ea9;
+  font-size: 12px;
+  padding-left: 30px;
+  font-weight: 500;
+}   
+.container-content .item-2 .item-2-3 {  /*Education*/
+  grid-column: 1; 
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 15% 85%;  
+  align-items: top;
+  font-size: 14px;
+} 
+.container-content .item-2 .item-2-3 .year, 
+.container-content .item-2 .item-2-3 .diploma 
+{
+  color: #939ea9;
+  font-size: 12px; 
+  font-weight: 500;
+}    
+.container-content .item-2 .item-2-3 .item-2-3-1 { 
+  grid-column: 1; 
+} 
+.container-content .item-2 .item-2-3 .item-2-3-2 { 
+  grid-column: 2; 
+} 
+.container-content .item-2 .item-2-4 {  /*Languages*/
+  grid-column: 1; 
+} 
+.container-content .item-2 .item-2-4 .star-color 
+{
+  color: #79d19a; 
+}  
+
+
+
+
+
+
+/* ========================================== Footer ========================================== */  
+.container-footer { 
+  display: grid;   
+  grid-template-columns: repeat(1, 1fr);  
+  justify-items: center; 
+  background: #2f3241; 
+  background-color: #2f3241;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  margin-top: 24px;
+}   
+.container-footer small{ 
+  color: #74b1be;
+}
+
+/* ========================================== Extra small devices (phones, less than 768px) ========================================== */ 
+@media (max-width: 767px) {
+  .header {
+    text-align: center;
+  }
+  .header .profile-image {
+    float: none !important;
+    margin: 0 auto;
+  }
+  .header .profile-content {
+    float: none !important;
+    text-align: center;
+  }
+  .header .btn {
+    margin-top: 30px;
+    float: none !important;
+  }
+  .project-image {
+    margin-bottom: 15px;
+  }
+}
