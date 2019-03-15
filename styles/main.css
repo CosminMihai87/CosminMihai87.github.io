@@ -99,46 +99,38 @@ blockquote, .blockquote {
 /* ========================================== Header ========================================== */ 
 .container-header { 
   display: grid;  
-  grid-template-columns: [first] 20% [line2] 10% [line3] 30% [col4-start] 20% [five] 20% [end];
-  grid-template-rows: [row1-start] 25% [row1-end] 35% [third-line] 40% [last-line];
+  grid-template-columns: 15% 10% 35% 25% 15%;   
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  align-items: center;
   background: #2f3241; 
   background-color: #2f3241;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 } 
 .container-header .item-1 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: span 2;
+  grid-column: 2;  
 }
 .container-header .item-1 img { 
   border-radius: 50%;
 }
 .container-header .item-2 {
-  grid-column-start: 3;
-  grid-column-end: col4-start;
-  grid-row-start: row1-end;
-  grid-row-end: 3;
+  grid-column: 3;  
 }
 .container-header .item-2 .name { 
   font-family: 'InsightWebBold'; 
   font-size: 38px; 
-  color: #74b1be;
-  padding-left: 2%;
+  color: #74b1be; 
 }
 .container-header .item-2 .desc {    
   font-family: 'InsightWebBold';
   font-size: 24px; 
-  color: #74b1be;
-  padding-left: 2%;
+  color: #74b1be; 
 } 
 .container-social {
-  display: inline-grid; 
-  grid-template-columns: [first] 20% [line2] 20% [line3] 20% [col4-start] 20% [five] 20% [end]; 
-  width: 35%; 
-  height: 70%;
-  padding-left: 2%;
+  display: grid; 
+  grid-template-columns: 25% 25% 25% 25%;   
+  width: 25%;   
   align-items: stretch;
 }  
 .container-social a .fa-2x { 
@@ -148,35 +140,26 @@ blockquote, .blockquote {
   color: #e0e5e6;
 }
 .container-social .item-1  {
-  grid-column-start: first;
-  grid-column-end: 2;
-  grid-row-start: row1-start;
-  grid-row-end: row1-end; 
+  grid-column: 1; 
+  grid-row: 1; 
 } 
 .container-social .item-2  {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: row1-start;
-  grid-row-end: row1-end; 
+  grid-column: 2; 
+  grid-row: 1; 
 } 
 .container-social .item-3  {
-  grid-column-start: 3;
-  grid-column-end: col4-start;
-  grid-row-start: row1-start;
-  grid-row-end: row1-end; 
+  grid-column: 3; 
+  grid-row: 1; 
 } 
 .container-social .item-4  {
-  grid-column-start: col4-start;
-  grid-column-end: 5;
-  grid-row-start: row1-start;
-  grid-row-end: row1-end; 
-} 
-
+  grid-column: 4; 
+  grid-row: 1; 
+}  
+ 
 /* ========================================== Sections ========================================== */
 .container-content {
   display: grid;   
-  grid-template-columns: 15% 45% 25% 15%; 
-  grid-template-rows: repeat(100, [row] auto  ); 
+  grid-template-columns: 15% 45% 25% 15%;  
   grid-auto-flow: column;
   grid-gap: 24px;
   justify-items: stretch; 
@@ -185,16 +168,16 @@ blockquote, .blockquote {
 .container-content .item-1 { 
   grid-column: 2; 
   display: grid;   
-  grid-template-columns: 100%; 
-  grid-template-rows: repeat(100, [row] auto  ); 
+  grid-template-columns: 100%;  
+  grid-auto-rows: min-content;
   grid-auto-flow: row;
   grid-gap: 24px;
 }
 .container-content .item-2 { 
   grid-column: 3; 
   display: grid;   
-  grid-template-columns: 100%; 
-  grid-template-rows: repeat(100, [row] auto  ); 
+  grid-template-columns: 100%;  
+  grid-auto-rows: min-content;
   grid-auto-flow: row;
   grid-gap: 24px;
 } 
