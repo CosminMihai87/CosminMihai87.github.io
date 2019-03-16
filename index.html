@@ -3,13 +3,13 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<meta name="description" content="Responsive HTML5 Portfolio Page">
 		<meta name="author" content="Cosmin Mihai">
 
 		<title>Cosmin Mihai portfolio</title>
 		
-		<!-- <link rel="shortcut icon" href="favicon.ico">  -->
+		<link rel="icon" href="assets/images/favicon.ico"> 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="styles/main.css"> 
@@ -84,7 +84,7 @@
 				<div class="item-1-3 section">  
 					<h2 class="heading">Projects</h2>
 					<div class="content">
-						<img class="img-responsive" src="assets/images/work_in_progress.jpg" alt="pic" />
+						<img class="img-responsive" style="width: 40%; height:auto;" src="assets/images/work_in_progress.jpg" alt="pic" />
 					</div>  
 				</div>
 
@@ -92,7 +92,7 @@
 					<h2 class="heading">Work Experience</h2>
 					<div class="item-1-4 content"> 
 						<div class="item-1-4-1">  
-							<img class="img-responsive" style="text-align: center; size: 50px;" src="assets/images/work-experience2.png" alt="pic" />
+							<img class="img-responsive" style="text-align: center; size: 50px;" src="assets/images/gfk.png" alt="pic" />
 						</div>
 						<div class="item-1-4-2">  
 							<span class="company"><strong>GfK Romania</strong></span><br> 
@@ -126,7 +126,7 @@
 							</span>
 						</div> 
 						<div class="item-1-4-1">  
-							<img class="img-responsive" src="assets/images/work-experience1.png" alt="pic" />
+							<img class="img-responsive" src="assets/images/ipsos.png" alt="pic" />
 						</div>
 						<div class="item-1-4-2">  
 							<span class="company"><strong>Ipsos Interactive Services</strong></span><br> 
@@ -152,18 +152,21 @@
  
 			<!--******RIGHT******--> 
 			<div class="item-2">  
-				<div class="item-2-1 section">  
+				<div class="section">  
 					<h2 class="heading sr-only">Basic Information</h2>
-					<div class="content">
-						<p><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span> Bucharest, RO </p> 
-						<p><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span> cosmin.mihai2612[at]google.com </p> 
-						<p><i class="fa fa-link"></i> <span class="sr-only">Website:</span><a href="https://CosminMihai87.github.io" target="new"> CosminMihai87.github.io </a> </p>   
+					<div class="item-2-1 content">
+						<div class="item-2-1-1"> <i class="fa fa-map-marker"></i> </div>
+						<div class="item-2-1-2"> <span class="sr-only">Location:</span> Bucharest, RO </div>
+						<div class="item-2-1-1"> <i class="fa fa-envelope-o"></i> </div>
+						<div class="item-2-1-2"> <span class="sr-only">Email:</span> cosmin.mihai2612[at]google.com </div> 
+						<div class="item-2-1-1"> <i class="fa fa-link"></i> </div> 
+						<div class="item-2-1-2"> <span class="sr-only">Website:</span><a href="https://github.com/CosminMihai87" target="new"> https://github.com/CosminMihai87 </a> </div>   
 					</div> 
 				</div>
 
 				<div class="item-2-2 section">  
 					<h2 class="heading">Testimonials</h2>
-					<div class="content">
+					<div class="content">	
 						<blockquote class="quote">
 							<p><i class="fa fa-quote-left"></i>Great guy to work with! Hardworking, creative, full of ideas and solutions - also quick to deliver.</p>
 						</blockquote> 
@@ -206,8 +209,68 @@
 				</div>
 
 				<div class="section">  
+					<h2 class="heading">Trainings and Courses</h2> 
+					<h4 class="heading">Soft Skills:</h2> 
+					<div class="item-2-4 content"> 
+						<div class="item-2-4-1">  
+							<img class="img-responsive" src="assets/images/trend-consult.png" alt="pic" />
+						</div>
+						<div class="item-2-4-2">  
+							<span class="title"><i class="far fa-diploma"></i><a href="assets/images/soft-skills1.jpg" target="new"> Leadership in Crisis Management </a></span> <br>
+							<span class="trainer-">with Ciprian Todoca, <strong>Trend Consult</strong></span>  
+							<span class="year">(may 2016)</span>
+						</div> 
+						<div class="item-2-4-1">  
+							<img class="img-responsive" src="assets/images/trend-consult.png" alt="pic" />
+						</div>
+						<div class="item-2-4-2">  
+							<span class="title"><i class="far fa-diploma"></i><a href="assets/images/soft-skills3.jpg" target="new"> Customer Orientation Skills </a></span> <br>
+							<span class="trainer-company">with Ciprian Todoca, <strong>Trend Consult</strong></span>  
+							<span class="year">(april 2016)</span>
+						</div> 
+						<div class="item-2-4-1">  
+							<img class="img-responsive" src="assets/images/trend-consult.png" alt="pic" />
+						</div>
+						<div class="item-2-4-2">  
+								<span class="title"><i class="far fa-diploma"></i><a href="assets/images/soft-skills2.jpg" target="new"> Negotiation </a></span> <br>
+							<span class="trainer-company">with Tiberius Budulea, <strong>Trend Consult</strong></span>  
+							<span class="year">(may 2016)</span>
+						</div> 
+					</div> <br>
+					<h4 class="heading">Tech Skills:</h2> 
+					<div class="item-2-4 content"> 
+						<div class="item-2-4-1">  
+							<img class="img-responsive" src="assets/images/axioma-solutions.png" alt="pic" />
+						</div>
+						<div class="item-2-4-2">  
+							<span class="title"><i class="far fa-diploma"></i><a href="assets/images/tech-skills1.jpg" target="new"> Agile Project Management </a></span> <br>
+							<span class="trainer-company">with Marian Stirbescu and Mihai Mlesnita <br> <strong>Axioma Solutions</strong>
+							<span class="year">(august 2017)</span>
+						</div>  
+						<div class="item-2-4-1">  
+							<img class="img-responsive" src="assets/images/udemy.png" alt="pic" />
+						</div>
+						<div class="item-2-4-2">  
+							<span class="title"><i class="far fa-diploma"></i><a href="https://www.udemy.com/the-complete-guide-to-angular-2/" target="new"> Angular 7 (formerly Angular 2) - The Complete Guide </a></span> <br>
+							<span class="trainer-company">with Maximilian Schwarzmüller, <strong>Udemy</strong> <br>
+							<span class="year">(2018)</span>
+						</div>  
+						<div class="item-2-4-1">  
+							<img class="img-responsive" src="assets/images/udemy.png" alt="pic" />
+						</div>
+						<div class="item-2-4-2">  
+							<span class="title"><i class="far fa-diploma"></i><a href="https://www.udemy.com/nodejs-the-complete-guide/" target="new"> NodeJS - The Complete Guide </a></span> <br>
+							<span class="trainer-company">with Maximilian Schwarzmüller, <strong>Udemy</strong> <br>
+								<span class="year">(2018)</span>
+						</div>  
+					</div> 
+
+
+				</div>
+
+				<div class="section">  
 					<h2 class="heading">Languages</h2> 
-					<div class="item-2-4 content">   
+					<div class="item-2-5 content">   
 						<p class="language"> 
 							<strong>Romanian:</strong> Native Speaker
 							<span class="star-color"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> 

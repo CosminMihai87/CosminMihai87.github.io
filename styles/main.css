@@ -216,7 +216,21 @@ blockquote, .blockquote {
 
 .container-content .item-2 .item-2-1 { /*Basic Information*/
   grid-column: 1; 
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 5% 95%;  
+  align-items: top;
+  font-size: 14px;
 }
+.container-content .item-2 .item-2-1 .item-2-1-1 { 
+  grid-column: 1; 
+  justify-self: center; 
+} 
+.container-content .item-2 .item-2-1 .item-2-1-2 { 
+  grid-column: 2; 
+  justify-self: left;
+}   
+
 .container-content .item-2 .item-2-2 { /*Testimonials*/
   grid-column: 1; 
 } 
@@ -240,6 +254,7 @@ blockquote, .blockquote {
   padding-left: 30px;
   font-weight: 500;
 }   
+
 .container-content .item-2 .item-2-3 {  /*Education*/
   grid-column: 1; 
   display: grid;
@@ -260,11 +275,33 @@ blockquote, .blockquote {
 } 
 .container-content .item-2 .item-2-3 .item-2-3-2 { 
   grid-column: 2; 
+}  
+
+.container-content .item-2 .item-2-4 {  /*Trainings and Courses*/
+  grid-column: 1; 
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 15% 85%;  
+  align-items: top;
+  font-size: 14px;
 } 
-.container-content .item-2 .item-2-4 {  /*Languages*/
+.container-content .item-2 .item-2-4 .year   
+{
+  color: #939ea9;
+  font-size: 12px; 
+  font-weight: 500;
+}    
+.container-content .item-2 .item-2-4 .item-2-4-1 { 
   grid-column: 1; 
 } 
-.container-content .item-2 .item-2-4 .star-color 
+.container-content .item-2 .item-2-4 .item-2-4-2 { 
+  grid-column: 2; 
+}  
+
+.container-content .item-2 .item-2-5 {  /*Languages*/
+  grid-column: 1; 
+} 
+.container-content .item-2 .item-2-5 .star-color 
 {
   color: #79d19a; 
 }  
@@ -291,22 +328,5 @@ blockquote, .blockquote {
 
 /* ========================================== Extra small devices (phones, less than 768px) ========================================== */ 
 @media (max-width: 767px) {
-  .header {
-    text-align: center;
-  }
-  .header .profile-image {
-    float: none !important;
-    margin: 0 auto;
-  }
-  .header .profile-content {
-    float: none !important;
-    text-align: center;
-  }
-  .header .btn {
-    margin-top: 30px;
-    float: none !important;
-  }
-  .project-image {
-    margin-bottom: 15px;
-  }
+  
 }
