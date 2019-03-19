@@ -21,16 +21,7 @@
   font-style: normal;
 } 
 
-/* ========================================== Overall ========================================== */
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
-/* Ex-Large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1400px) {
-  .container {
-    width: 1360px;
-  }
-}  */
+/* ========================================== Overall ========================================== */ 
 .img-responsive {
   max-width: 100%;
   height: auto;
@@ -187,9 +178,9 @@ blockquote, .blockquote {
   display: grid;   
   grid-template-columns: 1fr 3fr 2fr 1fr;  
   grid-auto-flow: column;
-  grid-gap: 24px;
+  grid-gap: 14px;
   justify-items: stretch; 
-  margin-top: 24px;
+  margin-top: 14px;
 }
 .container-content .item-1 { 
   grid-column: 2; 
@@ -198,7 +189,7 @@ blockquote, .blockquote {
   grid-auto-rows: min-content;
   grid-auto-flow: row;
   grid-column-gap: 0px;
-  grid-row-gap: 24px; 
+  grid-row-gap: 14px; 
 }
 .container-content .item-2 { 
   grid-column: 3; 
@@ -206,7 +197,7 @@ blockquote, .blockquote {
   grid-template-columns: 1fr;  
   grid-auto-rows: min-content;
   grid-auto-flow: row;
-  grid-gap: 24px;
+  grid-gap: 14px;
 } 
 
 @media only screen and (max-width : 768px) {
@@ -215,8 +206,10 @@ blockquote, .blockquote {
     grid-template-columns: 1fr;
     grid-auto-flow: column; 
     justify-items: stretch; 
+    grid-gap: 10px;
     margin-top: 10px;
     margin-right: 10px;
+    margin-left: 10px;
   }
   .container-content .item-1 { 
     grid-column: 1; 
@@ -232,10 +225,8 @@ blockquote, .blockquote {
     grid-template-columns: 1fr;  
     grid-auto-rows: min-content;
     grid-auto-flow: row;
-    grid-gap: 10px;
-    margin-left: 10px;
-  } 
-
+    grid-gap: 10px; 
+  }  
 }
 
 .container-content .item-1 .item-1-1 { /*About Me*/
@@ -250,50 +241,44 @@ blockquote, .blockquote {
 .container-content .item-1 .item-1-4 { /*Work Experience*/
   grid-column: 2; 
   display: grid;   
-  grid-template-columns: 2fr 8fr;   
-  grid-template-rows: max-content;
+  grid-template-columns: 50px max-content 1fr;   
+  grid-gap: 5px;
   grid-template-areas:    
-    "image company" 
-    "image location"  
-    " . title" 
-    " . duration" 
-    " . jd" 
+    "image company ." 
+    "image title duration"   
+    "jd jd jd" 
 } 
-.container-header .item-1 .item-1-4-image { 
+.container-content .item-1 .item-1-4-image { 
   grid-area: image; 
 } 
-.container-header .item-1 .item-1-4-company { 
+.container-content .item-1 .item-1-4-company { 
   grid-area: company; 
-} 
-.container-header .item-1 .item-1-4-location { 
-  grid-area: location; 
-} 
-.container-header .item-1 .item-1-4-title { 
+}  
+.container-content .item-1 .item-1-4-title { 
   grid-area: title; 
-} 
-.container-header .item-1 .item-1-4-duration { 
-  grid-area: duration; 
-} 
-.container-header .item-1 .item-1-4-jd { 
-  grid-area: jd; 
-}   
-
-/* .container-content .item-1 .item-1-4 .duration, 
-.container-content .item-1 .item-1-4 .location {
-  color: #939ea9;
-  font-size: 14px; 
+}    
+.container-content .item-1 .item-1-4-duration { 
+  grid-area: duration;   
+  color: #939ea9; 
   font-weight: 500;
 }    
-.container-content .item-1 .item-1-4 .company { 
-  font-size: 18px;  
-}   
-.container-content .item-1 .item-1-4 .item-1-4-1 { 
-  grid-column: 1; 
-} 
-.container-content .item-2 .item-1-4 .item-1-4-2 { 
-  grid-column: 2; 
-}  */
-
+.container-content .item-1 .item-1-4-jd { 
+  grid-area: jd; 
+}    
+@media only screen and (max-width : 768px) {
+  .container-content .item-1 .item-1-4 { 
+    grid-column: 1; 
+    display: grid;   
+    grid-template-columns: 20% 80%;   
+    grid-gap: 5px;
+    grid-template-areas:    
+      "image company" 
+      "image title"   
+      "duration duration"   
+      "jd jd" 
+  }   
+}
+  
 .container-content .item-2 .item-2-1 { /*Basic Information*/
   grid-column: 3; 
   display: grid;
@@ -386,10 +371,7 @@ blockquote, .blockquote {
   color: #79d19a; 
 }  
 
-
-
-
-
+ 
 
 /* ========================================== Footer ========================================== */  
 .container-footer { 
