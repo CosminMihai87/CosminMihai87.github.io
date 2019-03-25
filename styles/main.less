@@ -1,0 +1,411 @@
+/* =============== Variables ===============*/ 
+@import 
+url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+
+@font-face {
+  font-family: 'InsightWebBold';
+  src: url('../assets/font-styles/insight_web_bold.eot');
+  src: url('../assets/font-styles/insight_web_bold.eot?#iefix') format('embedded-opentype'), url('../assets/font-styles/insight_web_bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'InsightWebRegular';
+  src: url('../assets/font-styles/insight_web_regular.eot');
+  src: url('../assets/font-styles/insight_web_regular.eot?#iefix') format('embedded-opentype'), url('../assets/font-styles/insight_web_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}  
+
+@color1: #2f3241;  /* mostly for header-background and main-color (using darkened/lighten verions of it)*/
+@color2: #74b1be;  /* mostly for header-color, social links color, hyperlinks color (using darkened/lighten verions of it)*/
+@color3: #e0e5e6;  /* mostly for main-background, testimonial titles/people, education miscelanious stuff etc. (using darkened/lighten verions of it)*/
+
+@template-header-color: @color2;
+@template-header-background: @color1; 
+@template-main-color: lighten(@color1, 10%);  
+@template-main-background: @color3;  
+@template-footer-color: @color2;
+@template-footer-background: @color1; 
+/* =============== /Variables ===============*/ 
+/* =============== Mixins: normal and guarded ===============*/ 
+.border-radius(@radius: 10px;) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  -ms-border-radius: @radius;
+  border-radius: @radius;
+}  
+.hyperlinks(@color: @template-header-color; @transitions: 0.4s;) {
+  text-decoration: none;  
+  color: @color; 
+  -webkit-transition: all @transitions ease-in-out;
+  -moz-transition: all @transitions ease-in-out; 
+  -o-transition: all @transitions ease-in-out;
+  -ms-transition: all @transitions ease-in-out;
+  &:hover {
+    text-decoration: underline;
+    color: @template-header-background;
+  }
+} 
+.buttons(@color: @template-header-background; @background-color: #fff; @transitions: 0.4s;) 
+// when ()  
+{ 
+  color: lighten(@color, 10%); 
+  background-color: @background-color;
+  border: 1px solid lighten(@color, 10%);
+  padding: 0px 10px;
+  text-decoration: none;   
+  -webkit-transition: all @transitions ease-in-out;
+  -moz-transition: all @transitions ease-in-out; 
+  -o-transition: all @transitions ease-in-out;
+  -ms-transition: all @transitions ease-in-out;
+  &:hover { 
+    color: @background-color;
+    background-color: @template-header-color;
+    border: 1px solid @template-header-color;
+  }
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none;
+  }   
+} 
+.font(@color: @template-main-color; @font-size: 16px; @font-family: InsightWebRegular, Verdana, Helvetica, Arial;) {
+  font-family: @font-family;
+  color: @color;
+  font-size: @font-size;
+}  
+/* =============== /Mixins: normal and guarded ===============*/ 
+/* =============== General ===============*/ 
+.header {
+  .font(@template-header-color);
+  background: @template-header-background;
+}
+.main {
+  .font(@template-main-color);
+  background: @template-main-background; 
+  .item-1,
+  .item-2 {
+    margin: 14px 0px;
+  }
+}
+.section { 
+  .border-radius;
+  background: #fff;
+  padding: 24px;
+  box-shadow: 0 0 15px rgba(0,0,0,.1);
+  @media only screen and (max-width : 768px) { 
+    padding: 16px;
+    margin: 0px 5px;
+  }
+}    
+.footer {
+  .font(@template-footer-color);
+  background: @template-footer-background;
+} 
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}   
+a {
+  .hyperlinks;
+}
+.btn {
+  .buttons;
+} 
+/* =============== /General ===============*/ 
+
+/* ========================================== Header ========================================== */  
+.header { 
+  display: grid;  
+  grid-template-columns: 1fr 5fr 1fr; 
+  grid-gap: 24px;  
+  padding : 12px 0px;
+  .item-1 {
+    grid-column: 2;  
+    display: grid;   
+    grid-template-columns: 200px max-content; 
+    grid-gap: 10px;   
+    grid-template-areas:  
+      "image ."
+      "image name"
+      "image desc"
+      "image social" 
+      "image .";
+    @media only screen and (max-width : 768px) { 
+      display: grid;  
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 10px;   
+      grid-template-areas:  
+        "image"
+        "name"
+        "desc"
+        "social";
+    }
+    .item-1-image { 
+      grid-area: image; 
+      @media only screen and (max-width : 768px) { 
+        justify-self: center;
+        text-align: center;
+      }
+    };   
+    .item-1-name { 
+      grid-area: name;  
+      margin-bottom: 0em;
+      @media only screen and (max-width : 768px) { 
+        justify-self: center;
+        text-align: center;
+      }
+    }; 
+    .item-1-desc { 
+      grid-area: desc;   
+      margin-bottom: 0em;
+      @media only screen and (max-width : 768px) { 
+        justify-self: center;
+        text-align: center;
+      }
+    };  
+    .item-1-social { 
+      grid-area: social; 
+      margin-bottom: 0em;
+      display: flex;
+      flex-direction: row;
+      a {
+        .fa-2x { 
+          font-size: 20px; 
+        }  
+        .icon-background {
+          color: #fff;
+        }  
+      }
+      @media only screen and (max-width : 768px) { 
+        justify-self: center;
+        text-align: center;
+      }
+    }; 
+    .item-1-name { 
+      font-family: 'InsightWebBold'; 
+      font-size: 38px;  
+    };
+    .item-1-desc {  
+      font-family: 'InsightWebBold';
+      font-size: 24px;  
+    };
+    img { 
+      border-radius: 50%;
+    };  
+  } 
+}     
+    
+/* ========================================== Main ========================================== */ 
+.main {
+  display: grid;   
+  grid-template-columns: 1fr 3fr 2fr 1fr;  
+  grid-auto-flow: column;
+  grid-gap: 14px;
+  justify-items: stretch;  
+  @media only screen and (max-width : 768px) {
+    display: grid;   
+    grid-template-columns: 1fr;
+    grid-auto-flow: column; 
+    justify-items: stretch; 
+    grid-gap: 10px; 
+  }
+  .item-1 { 
+    grid-column: 2; 
+    display: grid;   
+    grid-template-columns: 1fr;  
+    grid-auto-rows: min-content;
+    grid-auto-flow: row;
+    grid-column-gap: 0px;
+    grid-row-gap: 14px;  
+    @media only screen and (max-width : 768px) {
+      grid-column: 1; 
+      display: grid;   
+      grid-template-columns: 1fr;  
+      grid-auto-rows: min-content;
+      grid-auto-flow: row;
+      grid-gap: 10px;
+    }
+    .item-1-1 { /*About Me*/  
+      grid-column: 2; 
+    };
+    .item-1-2 { /*Tech Interests or Passion:*/
+      grid-column: 2; 
+    };
+    .item-1-3 { /*Projects*/
+      grid-column: 2; 
+      display: grid;   
+      grid-template-columns: 3fr 9fr;   
+      grid-gap: 5px;
+      grid-template-areas:    
+        "image title" 
+        "image description"   
+        "image tech"
+        "image link"; 
+      @media only screen and (max-width : 768px) {
+        grid-column: 1; 
+        display: grid;   
+        grid-template-columns: 20% 80%;    
+      };
+      .item-1-3-image { 
+        grid-area: image; 
+      };
+      .item-1-3-title { 
+        grid-area: title; 
+        font-size: 18px;
+      };
+      .item-1-3-description { 
+        grid-area: description; 
+        font-size: 14px;
+      };
+      .item-1-3-tech { 
+        grid-area: tech; 
+      };
+      .item-1-3-link { 
+        grid-area: link; 
+      };
+    };
+    .item-1-4 { /*Work Experience*/
+      grid-column: 2; 
+      display: grid;   
+      grid-template-columns: 50px max-content 1fr;   
+      grid-gap: 5px;
+      grid-template-areas:    
+        "image company ." 
+        "image title duration"   
+        "jd jd jd";
+      @media only screen and (max-width : 768px) {
+        grid-column: 1; 
+        display: grid;   
+        grid-template-columns: 20% 80%;   
+        grid-gap: 5px;
+        grid-template-areas:    
+          "image company" 
+          "image title"   
+          "duration duration"   
+          "jd jd" 
+      };
+      .item-1-4-image { 
+        grid-area: image; 
+      };
+      .item-1-4-company { 
+        grid-area: company; 
+      };
+      .item-1-4-title { 
+        grid-area: title; 
+      };
+      .item-1-4-duration { 
+        grid-area: duration;   
+        .font(darken(@template-main-background, 30%); 14px); 
+      };
+      .item-1-4-jd { 
+        grid-area: jd; 
+      } 
+    } 
+  }
+  .item-2 { 
+    grid-column: 3; 
+    display: grid;   
+    grid-template-columns: 1fr;  
+    grid-auto-rows: min-content;
+    grid-auto-flow: row;
+    grid-gap: 14px; 
+    @media only screen and (max-width : 768px) {
+      grid-column: 1; 
+      display: grid;   
+      grid-template-columns: 1fr;  
+      grid-auto-rows: min-content;
+      grid-auto-flow: row;
+      grid-gap: 10px; 
+    }
+    .item-2-1 { /*Basic Information*/
+      grid-column: 3; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 5% 95%;  
+      align-items: top;
+      font-size: 14px;
+      .item-2-1-1 { 
+        grid-column: 1; 
+        justify-self: center; 
+      };
+      .item-2-1-2 { 
+        grid-column: 2; 
+        justify-self: left;
+      };  
+    };
+    .item-2-2 { /*Testimonials*/
+      grid-column: 3; 
+      .font(@template-main-color; 15px);
+      .quote {  
+        border-left: 4px solid @template-header-color;
+        padding: 0 0.5em;
+        .fa { 
+          color: @template-header-color;
+          margin-right: 15px;
+        }  
+      }
+      .signature {
+        .font(darken(@template-main-background, 30%); 12px);
+        padding-left: 30px;
+      }
+    };
+    .item-2-3 {  /*Education*/
+      grid-column: 3; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 15% 85%;  
+      align-items: top;
+      font-size: 14px; 
+      .item-2-3-1 { 
+        grid-column: 1; 
+      };
+      .item-2-3-2 { 
+        grid-column: 2;   
+      };  
+      .year,
+      .diploma {
+        .font(darken(@template-main-background, 30%); 12px);  
+      };
+    };
+    .item-2-4 {  /*Trainings and Courses*/
+      grid-column: 3; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 15% 85%;  
+      align-items: top;
+      font-size: 14px;
+      .item-2-4-1 { 
+        grid-column: 1; 
+      };
+      .item-2-4-2 { 
+        grid-column: 2; 
+      };
+      .year {
+        .font(darken(@template-main-background, 30%); 12px);  
+      };   
+    };
+    .item-2-5 {  /*Languages*/
+      grid-column: 3; 
+      .star-color 
+      {
+        color: @template-header-color; 
+      };
+    };     
+  }  
+}   
+
+/* ========================================== Footer ========================================== */  
+.footer { 
+  display: grid;   
+  grid-template-columns: repeat(1, 1fr);  
+  justify-items: center;  
+  padding: 0px 5px;  
+  small{ 
+    color: @template-header-color;
+  };
+}    
+ 
