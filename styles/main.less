@@ -20,7 +20,7 @@ url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
 @color1: #2f3241;  /* mostly for header-background and main-color (using darkened/lighten verions of it)*/
 @color2: #74b1be;  /* mostly for header-color, social links color, hyperlinks color (using darkened/lighten verions of it)*/
 @color3: #e0e5e6;  /* mostly for main-background, testimonial titles/people, education miscelanious stuff etc. (using darkened/lighten verions of it)*/
-
+  
 @template-header-color: @color2;
 @template-header-background: @color1; 
 @template-main-color: lighten(@color1, 10%);  
@@ -48,9 +48,7 @@ url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
     color: @template-header-background;
   }
 } 
-.buttons(@color: @template-header-background; @background-color: #fff; @transitions: 0.4s;) 
-// when ()  
-{ 
+.buttons(@color: @template-header-background; @background-color: #fff; @transitions: 0.4s;) { 
   color: lighten(@color, 10%); 
   background-color: @background-color;
   border: 1px solid lighten(@color, 10%);
